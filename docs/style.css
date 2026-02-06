@@ -26,6 +26,10 @@ body {
 }
 
 /*== Barre de navigation ==*/
+.logo {
+    width: 10%;
+}
+
 nav ul{
     list-style-type: none;
 }
