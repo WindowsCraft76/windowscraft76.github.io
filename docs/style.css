@@ -1,0 +1,77 @@
+/*== Style principal ==*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #111210;
+    color: white;
+}
+
+.content{
+    text-align: center;
+    padding-top: 75px;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.title {
+    font-family: monospace;
+}
+
+.presentation{
+    padding-top: 2%;
+}
+
+/*== Barre de navigation ==*/
+nav ul{
+    list-style-type: none;
+}
+
+nav ul li{
+    float: left;
+    width: 20%;
+    text-align: center;
+    position: relative;
+}
+
+nav a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+    background-color: black;
+}
+
+nav a:hover{
+    color: #37ad00;
+    border-bottom: 2px solid #49e600;
+}
+
+.sous{
+    display: none;
+    box-shadow: 0px 1px 2px #2b2b2b;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav > ul li:hover .sous{
+    display: block;
+}
+
+/*Menu deroulent*/
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+}
+
+.deroulant > a::after{
+    content:"▼";
+    font-size: 15px;
+}

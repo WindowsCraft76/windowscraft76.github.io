@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    body {
+        background-color: cornflowerblue;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-family: monospace;
+        display: flex;
+        margin: 30px auto;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Random Music</title>
+</head>
+<body>
+    <button onclick="playRandomMusic()">Play Random Music</button>
+    <audio id="player"></audio>
+</body>
+</html>
+    <script>
+        function playRandomMusic() {
+            const musics = [
+                "./musics/song1.mp3",
+                "./musics/song2.mp3",
+                "./musics/song3.mp3",
+                "./musics/song4.mp3",
+                "./musics/song5.mp3",
+                "./musics/song6.mp3"
+            ];
+
+            const player = document.getElementById("player");
+
+            if (!player) {
+                console.error("Audio player not found!");
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * musics.length);
+            player.src = musics[randomIndex];
+            player.play();
+        }
+    </script>
